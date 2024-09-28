@@ -1,0 +1,64 @@
+/* src/components/ProductsCard.css */
+
+/* Set a fixed height and width for the product card */
+.product-card {
+    width: 200px;  /* Set a fixed width for the card */
+    height: 300px; /* Set a fixed height for the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px; /* Use smaller margin to reduce space between cards */
+  }
+  
+  /* Ensure the square image is within the card */
+  .square-img {
+    width: 100%; /* Set image width to fill the card */
+    height: 150px; /* Set a fixed height for the image to make it square */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
+  
+  /* Compact the body of the card */
+  .card-body-compact {
+    padding: 8px; /* Reduce padding inside the card body */
+    flex-grow: 1; /* Allow the body to expand to fill space */
+  }
+  
+  /* Smaller font size for title and text */
+  .card-title-small {
+    font-size: 0.85rem; /* Reduce title font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis if text overflows */
+  }
+  
+  .card-text-small {
+    font-size: 0.75rem; /* Reduce description font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis if text overflows */
+  }
+  
+  /* src/components/Stylings/ProductsCard.css */
+
+.quantity-selector {
+    display: flex; /* Use flexbox to align child elements in a row */
+    align-items: center; /* Center the items vertically */
+    justify-content: space-between; /* Space out the buttons evenly */
+    gap: 10px; /* Add some spacing between the elements */
+    margin-top: 10px; /* Add some top margin to space out from other content */
+  }
+  
+  /* Ensure the buttons have consistent width */
+  .quantity-selector .btn {
+    width: 40px; /* Set a fixed width for the increment/decrement buttons */
+    padding: 5px; /* Adjust padding */
+    text-align: center; /* Center align text */
+  }
+  
+  /* Style the input field for the quantity */
+  .quantity-selector .form-control {
+    width: 60px; /* Set a fixed width for the input field */
+    text-align: center; /* Center align the text */
+    padding: 5px 0; /* Adjust padding for better alignment */
+  }
+  
