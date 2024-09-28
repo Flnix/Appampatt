@@ -20,7 +20,7 @@ export default function ProductsCard({ product, handleQuantityChange, quantity }
 
   return (
     <Card>
-      <Card.Img variant="top" src={product.img} />
+      <Card.Img variant="top" className='square-img' src={product.img} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>₹{product.price.toFixed(2)}</Card.Text>
