@@ -1,0 +1,28 @@
+/* src/components/Stylings/CartPage.css */
+
+.bottom-overlay {
+    background-color: #f8f9fa; /* Optional: Background color for clarity */
+    position: fixed; /* Fix it at the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 10;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visibility */
+    padding: 1rem; /* Padding around the container */
+  }
+  
+  .back-button,
+  .payment-button {
+    flex-grow: 1;
+  }
+  
+  .w-100 {
+    width: 100%;
+  }
+  
+  /* Optional styling for equal height */
+  .back-button,
+  .payment-button {
+    height: 50px; /* Set uniform button height */
+  }
+  
