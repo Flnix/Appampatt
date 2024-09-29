@@ -27,20 +27,23 @@ export default function Products({ products, quantities, handleAddToCart }) {
   }, [products, quantities]);
 
   return (
-    <Container fluid className="d-flex flex-column justify-content-start align-items-center mt-5 bg-dark" style={{ minHeight: '100vh' }}>
+    <div className='bg-dark mt-5 pt-5'>
+    
+        <CustomCarousel />
+     
+    <Container fluid className="d-flex flex-column justify-content-start align-items-center mt-5 " style={{ minHeight: '100vh' }}>
       {/* Navbar component */}
       <NavBar />
 
       {/* Carousel component positioned at the top */}
-      <div className="w-100">
-        <CustomCarousel />
-      </div>
+      
 
       {/* Product list below the carousel */}
-      <Container className="py-3 d-flex justify-content-center align-items-center" style={{ maxWidth: '1000px' }}>
-        <Row className="g-2 justify-content-center w-100">
+      
+      <Container className="py-3" style={{ maxWidth: '600px' }}>
+        <Row className="g-2 justify-content-center">
           {products.map((product) => (
-            <Col key={product.id} xs={6}  md={4} className="d-flex justify-content-center">
+            <Col key={product.id} xs={6} md={4} className="d-flex justify-content-center">
               <ProductsCard
                 product={product}
                 handleQuantityChange={handleQuantityChange}
@@ -50,9 +53,7 @@ export default function Products({ products, quantities, handleAddToCart }) {
           ))}
         </Row>
       </Container>
-
-      {/* Total and Show Cart button at the bottom */}
-      <div className="bottom-overlay bg-warning  d-flex justify-content-between align-items-center w-100 p-3">
+      <div className="bottom-overlay">
         <span className="total-price">Total: ₹{totalPrice.toFixed(2)}</span>
         <Link to="/cart">
           <Button variant="success" className="show-cart-button">
@@ -61,5 +62,5 @@ export default function Products({ products, quantities, handleAddToCart }) {
         </Link>
       </div>
     </Container>
-  );
+  </div>);
 }
