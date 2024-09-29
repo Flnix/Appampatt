@@ -3,15 +3,17 @@ import React, { useState } from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Products from './Components/Products';
 import CartPage from './Components/CartPage';
+import ProductImage from './Images/ProductImage.jpg'
+
 
 // Dummy product data for demonstration purposes
 const productList = [
-  { id: 1, name: 'Product 1', price: 10.0, img: '//images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg' },
-  { id: 2, name: 'Product 2', price: 15.0, img: '//images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg' },
-  { id: 3, name: 'Product 3', price: 15.0, img: '//images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg' },
-  { id: 4, name: 'Product 4', price: 15.0, img: '//images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg' },
-  { id: 5, name: 'Product 5', price: 15.0, img: '//images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg' },
-  { id: 6, name: 'Product 6', price: 15.0, img: 'https://picsum.photos/200/300 '},
+  { id: 1, name: 'Product 1', price: 10.0, img: `${ProductImage}` },
+  { id: 2, name: 'Product 2', price: 15.0, img: `${ProductImage}` },
+  { id: 3, name: 'Product 3', price: 15.0, img: `${ProductImage}` },
+  { id: 4, name: 'Product 4', price: 15.0, img: `${ProductImage}` },
+  { id: 5, name: 'Product 5', price: 15.0, img: `${ProductImage}`},
+  { id: 6, name: 'Product 6', price: 15.0, img: `${ProductImage}`},
 ];
 
 function App() {
@@ -49,7 +51,8 @@ function App() {
     });
   };
 
-  const handleClearCart = () => setCartItems([]);
+  const handleClearCart = () => {setCartItems([]);
+    setQuantities({});};
 
   return (
     <Router>

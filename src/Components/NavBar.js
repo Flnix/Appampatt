@@ -4,12 +4,21 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import HeaderLogo from '../Images/HeaderLogoImage.png'
 
 export default function NavBar() {
   return (
-    <Navbar fixed='top' expand="lg" className="bg-body-tertiary ">
+    <Navbar fixed='top' expand="lg" className="bg-body-tertiary " data-bs-theme="dark">
       <Container>
-        <Navbar.Brand as={Link} to="">SweetShop</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/">
+            <img
+              src= {HeaderLogo}
+              width="180"
+              height="50"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
