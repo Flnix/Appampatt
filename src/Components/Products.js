@@ -5,19 +5,19 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import ProductsCard from './ProductsCard';
-import './Stylings/Products.css'; // Custom CSS for your product page styling
+import './Stylings/Products.css'; 
 import NavBar from './NavBar';
-import CustomCarousel from './CustomCarousel'; // Renamed to CustomCarousel to avoid confusion
+import CustomCarousel from './CustomCarousel'; 
+import ContactCard from './ContactCard';
 
 export default function Products({ products, quantities, handleAddToCart }) {
   const [totalPrice, setTotalPrice] = useState(0);
 
-  // Function to handle changes in quantity and update the cart accordingly
+
   const handleQuantityChange = (productId, quantity) => {
     handleAddToCart(productId, quantity);
   };
 
-  // Calculate total price based on quantities and product prices
   useEffect(() => {
     const total = products.reduce((sum, product) => {
       const quantity = quantities[product.id] || 0;
@@ -28,39 +28,44 @@ export default function Products({ products, quantities, handleAddToCart }) {
 
   return (
     <div className='bg-dark mt-5 pt-5'>
-    
-        <CustomCarousel />
-     
-    <Container fluid className="d-flex flex-column justify-content-start align-items-center mt-5 " style={{ minHeight: '100vh' }}>
-      {/* Navbar component */}
-      <NavBar />
+      <CustomCarousel />
+      <Container fluid className="d-flex flex-column justify-content-start align-items-center mt-5" style={{ minHeight: '100vh' }}>
+  
+        <NavBar />
 
-      {/* Carousel component positioned at the top */}
-      
+  
+        <Container className="py-3" style={{ maxWidth: '600px' }}>
+          <Row className="g-2 justify-content-center">
+            {products.map((product) => (
+              <Col key={product.id} xs={6} md={4} className="d-flex justify-content-center">
+                <ProductsCard
+                  product={product}
+                  handleQuantityChange={handleQuantityChange}
+                  quantity={quantities[product.id] || 0} 
+                />
+              </Col>
+            ))}
+          </Row>
+        </Container>
 
-      {/* Product list below the carousel */}
-      
-      <Container className="py-3" style={{ maxWidth: '600px' }}>
-        <Row className="g-2 justify-content-center">
-          {products.map((product) => (
-            <Col key={product.id} xs={6} md={4} className="d-flex justify-content-center">
-              <ProductsCard
-                product={product}
-                handleQuantityChange={handleQuantityChange}
-                quantity={quantities[product.id] || 0} // Pass the current quantity from props
-              />
-            </Col>
-          ))}
-        </Row>
+        
+        {totalPrice > 0 && (
+          <div className="bottom-overlay">
+            <span className="total-price">Total: ₹{totalPrice.toFixed(2)}</span>
+            <Link to="/cart">
+              <Button variant="success" className="show-cart-button">
+                Show Cart
+              </Button>
+            </Link>
+          </div>
+        )}
       </Container>
-      <div className="bottom-overlay">
-        <span className="total-price">Total: ₹{totalPrice.toFixed(2)}</span>
-        <Link to="/cart">
-          <Button variant="success" className="show-cart-button">
-            Show Cart
-          </Button>
-        </Link>
+
+      {/* below yello cardd */}
+      <div className='my-5'>
+        <ContactCard />
+        <p className='text-white d-flex justify-content-center my-3'>@Copyright Appampatt Egg Sweet 2024</p>
       </div>
-    </Container>
-  </div>);
+    </div>
+  );
 }

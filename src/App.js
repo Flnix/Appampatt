@@ -6,7 +6,7 @@ import CartPage from './Components/CartPage';
 import ProductImage from './Images/ProductImage.jpg'
 
 
-// Dummy product data for demonstration purposes
+
 const productList = [
   { id: 1, name: 'Product 1', price: 10.0, img: `${ProductImage}` },
   { id: 2, name: 'Product 2', price: 15.0, img: `${ProductImage}` },
@@ -18,24 +18,24 @@ const productList = [
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const [quantities, setQuantities] = useState({}); // Shared state for product quantities
+  const [quantities, setQuantities] = useState({}); 
 
-  // Handle quantity change for products and update the cart
+
   const handleAddToCart = (productId, quantity) => {
-    // Update the quantities state
+   
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
       [productId]: quantity,
     }));
 
-    // Update the cart items state
+
     setCartItems((prevCartItems) => {
       const existingItemIndex = prevCartItems.findIndex((item) => item.product.id === productId);
 
-      // If product is already in cart, update its quantity
+
       if (existingItemIndex !== -1) {
         const updatedCartItems = [...prevCartItems];
-        // If quantity is zero, remove the product from the cart
+     
         if (quantity === 0) {
           updatedCartItems.splice(existingItemIndex, 1);
         } else {
@@ -43,11 +43,11 @@ function App() {
         }
         return updatedCartItems;
       } else if (quantity > 0) {
-        // Add the product to cart if quantity is greater than 0
+     
         const product = productList.find((product) => product.id === productId);
         return [...prevCartItems, { product, quantity }];
       }
-      return prevCartItems; // Return the cart items as is if conditions don't match
+      return prevCartItems;
     });
   };
 
@@ -63,8 +63,8 @@ function App() {
             element={
               <Products
                 products={productList}
-                quantities={quantities} // Pass down the shared quantities state
-                handleAddToCart={handleAddToCart} // Pass down the handler
+                quantities={quantities} 
+                handleAddToCart={handleAddToCart} 
               />
             }
           />
