@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "./static/css/main.76b5cec8.css",
+    "main.js": "./static/js/main.210a0a29.js",
+    "static/js/453.f1725f04.chunk.js": "./static/js/453.f1725f04.chunk.js",
+    "static/media/exampleImage.jpg": "./static/media/exampleImage.89549378a58a4e0095a0.jpg",
+    "static/media/HeaderLogoImage.png": "./static/media/HeaderLogoImage.dd0f6d8520f147dffca8.png",
+    "static/media/ProductImage.jpg": "./static/media/ProductImage.c3919c6c18bdd9c59f10.jpg",
+    "index.html": "./index.html",
+    "static/media/telephone-fill.svg": "./static/media/telephone-fill.c63912d1f534bc46292e9a01fed2bb78.svg",
+    "static/media/house-fill.svg": "./static/media/house-fill.f40e077d31ec8ecdce04090254273839.svg",
+    "static/media/envelope-fill.svg": "./static/media/envelope-fill.6f1aeee4923761db2920e6d383b9cc36.svg",
+    "main.76b5cec8.css.map": "./static/css/main.76b5cec8.css.map",
+    "main.210a0a29.js.map": "./static/js/main.210a0a29.js.map",
+    "453.f1725f04.chunk.js.map": "./static/js/453.f1725f04.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76b5cec8.css",
+    "static/js/main.210a0a29.js"
+  ]
+}
