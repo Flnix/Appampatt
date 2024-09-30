@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
-import './Stylings/CartPage.css'; // Import custom CSS for styling
+import './Stylings/CartPage.css'; 
 
 export default function CartPage({ cartItems, handleClearCart }) {
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -13,7 +13,7 @@ export default function CartPage({ cartItems, handleClearCart }) {
   return (
     <>
       <NavBar />
-      <Container className="py-3 mt-5" style={{ maxWidth: '1000px' }}>
+      <Container className="py-3 pt-5  mt-5" style={{ maxWidth: '1000px' }}>
         <h2>Your Cart</h2>
         {cartItems.length === 0 ? (
           <p>No items in the cart. Please add some products.</p>

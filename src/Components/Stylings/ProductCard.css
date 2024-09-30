@@ -62,3 +62,55 @@
     padding: 5px 0; /* Adjust padding for better alignment */
   }
   
+  /* src/components/Stylings/ProductCard.css */
+
+/* Smaller size and grey color for product weight */
+.product-weight {
+  font-size: 0.8rem;  /* Smaller font size */
+  color: #808080;     /* Grey color */
+  margin-bottom: 0;   /* Remove bottom margin to eliminate gap */
+}
+
+/* Normal size and color for product price */
+.product-price {
+  font-size: 1rem;    /* Slightly larger font size for price */
+  margin-top: 0.3rem; /* Slight spacing between weight and price */
+}
+
+
+/* src/components/Stylings/ProductCard.css */
+/* src/components/Stylings/ProductCard.css */
+
+/* New styles for LargerProductCard */
+.larger-product-card {
+  width: 400px;  /* Width of the larger product card */
+  height: 300px; /* Reduced height for the larger product card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keep content spaced out */
+  margin: 10px; /* Adjust margin */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Larger font size for the title */
+.card-title-large {
+  font-size: 1.2rem; /* Larger font size for title */
+  margin-bottom: 10px; /* Add space below title */
+}
+
+/* Ensure the square image is within the card */
+.square-img {
+  width: 100%; /* Set image width to fill the card */
+  height: 150px; /* Set a fixed height for the image to make it square */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Adjust the quantity selector styling */
+.quantity-selector {
+  display: flex; /* Use flexbox to align child elements in a row */
+  align-items: center; /* Center the items vertically */
+  justify-content: center; /* Space out the buttons evenly */
+  gap: 10px; /* Add some spacing between the elements */
+  margin-top: auto;
+  margin-bottom: 30px; /* Push quantity selector to the bottom of the card */
+}

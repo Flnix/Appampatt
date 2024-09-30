@@ -4,16 +4,25 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Products from './Components/Products';
 import CartPage from './Components/CartPage';
 import ProductImage from './Images/ProductImage.jpg'
-
+import Shop from './Components/Shop'
+import History from './Components/History';
+import Media from './Components/Media';
+import AboutUs from './Components/AboutUs'
+import { Navigate } from 'react-router-dom';
 
 
 const productList = [
-  { id: 1, name: 'Product 1', price: 10.0, img: `${ProductImage}` },
-  { id: 2, name: 'Product 2', price: 15.0, img: `${ProductImage}` },
-  { id: 3, name: 'Product 3', price: 15.0, img: `${ProductImage}` },
-  { id: 4, name: 'Product 4', price: 15.0, img: `${ProductImage}` },
-  { id: 5, name: 'Product 5', price: 15.0, img: `${ProductImage}`},
-  { id: 6, name: 'Product 6', price: 15.0, img: `${ProductImage}`},
+  { id: 1, name: 'Buy 1Kg Get 100g free', price: 649.0, img: `${ProductImage}`,weight: "1Kg" },
+  { id: 2, name: 'Buy 2Kg Get 250g free', price: 1260.0, img: `${ProductImage}`,weight: "2Kg"  },
+  { id: 3, name: 'Mutta Mittai', price: 169.0, img: `${ProductImage}`,weight: "250g"  },
+  { id: 4, name: 'Mutta Mittai', price: 339.0, img: `${ProductImage}`,weight: "500g"  },
+  { id: 5, name: 'Mutta Mittai', price: 649.0, img: `${ProductImage}`,weight: "1Kg" },
+  { id: 6, name: 'Mutta Mittai', price: 1260.0, img: `${ProductImage}`,weight: "2Kg" },
+];
+
+const currentOffers = [
+  { id: 1, name: 'Buy 1Kg Get 100g free', price: 649.0, img: `${ProductImage}`,weight: "" },
+  { id: 2, name: 'Buy 2Kg Get 250g free', price: 1260.0, img: `${ProductImage}`,weight: ""  },
 ];
 
 function App() {
@@ -58,12 +67,14 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
           <Route
-            path="/"
+            path={"/home"}
             element={
               <Products
                 products={productList}
                 quantities={quantities} 
+                currentOffers={currentOffers}
                 handleAddToCart={handleAddToCart} 
               />
             }
@@ -77,6 +88,15 @@ function App() {
               />
             }
           />
+          <Route path='/shop' element={<Shop
+          products={productList}
+          quantities={quantities} 
+          currentOffers={currentOffers}
+          handleAddToCart={handleAddToCart}/>}/>
+          <Route path='/media' element={<Media/>}/>
+          <Route path='/history' element={<History/>}/>
+          <Route path='/aboutus' element={<AboutUs/>} />
+ 
         </Routes>
       </div>
     </Router>

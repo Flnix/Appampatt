@@ -7,13 +7,12 @@ import { Link } from "react-router-dom";
 import ProductsCard from "./ProductsCard";
 import "./Stylings/Products.css";
 import NavBar from "./NavBar";
-import CustomCarousel from "./CustomCarousel";
 import ContactCard from "./ContactCard";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import CurrentOffers from "./CurrentOffers";
 
-export default function Products({ products, quantities, handleAddToCart, currentOffers }) {
+export default function Shop({ products, quantities, handleAddToCart, currentOffers }) {
   const [totalPrice, setTotalPrice] = useState(0);
   const [activeTab, setActiveTab] = useState("All Products"); // Use state for active tab
 
@@ -32,7 +31,6 @@ export default function Products({ products, quantities, handleAddToCart, curren
   return (
     <div className="bg-dark mt-5 pt-5">
       <NavBar />
-      <CustomCarousel />
 
       {/* Use `activeKey` and `onSelect` to control the tabs */}
       <Tabs
@@ -42,7 +40,7 @@ export default function Products({ products, quantities, handleAddToCart, curren
         className="justify-content-center custom-tabs"
       >
         <Tab eventKey="All Products" title="All Products">
-         
+          <Container fluid className="d-flex flex-column justify-content-start align-items-center mt-4">
             {/* Remove unnecessary minHeight from the CurrentOffers */}
             <CurrentOffers
               quantities={quantities}
@@ -66,7 +64,7 @@ export default function Products({ products, quantities, handleAddToCart, curren
                 </Row>
               </Container>
             </Container>
-       
+          </Container>
         </Tab>
         <Tab eventKey="Current Offers" title="Current Offers">
           <CurrentOffers
@@ -96,5 +94,5 @@ export default function Products({ products, quantities, handleAddToCart, curren
         </p>
       </div>
     </div>
-  );
+  )
 }

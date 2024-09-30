@@ -1,12 +1,24 @@
-import React from 'react'
-import './Stylings/ContactCard.css'
+import React from 'react';
+import PhoneIcon from '../Images/telephone-fill.svg'; // Import the SVG as a path
+import LocationIcon from '../Images/house-fill.svg';
+import EmailIcon from '../Images/envelope-fill.svg';
+import './Stylings/ContactCard.css';
 
 export default function ContactCard() {
   return (
-    <div className='colour-warning'>
-      <p>Mobile : +91 6369715501</p>
-      <p>Address :Opposite to Gemgrow Appartment, Wings Sports academy road Padur, 627117</p>
-      <p>Email :jkasnjdna</p>
+    <div className='contact-card' style={{ backgroundColor: 'yellow' }}> {/* Inline style for testing */}
+      <div className='contact-item'>
+        <img src={PhoneIcon} alt="Phone Icon" className='contact-icon' />
+        <p>Mobile: +91 6369715501</p>
+      </div>
+      <div className='contact-item'>
+        <img src={LocationIcon} alt="Location Icon" className='contact-icon' />
+        <p>Address: Opposite to Gemgrow Apartment, Wings Sports Academy Road, Padur, 627117</p>
+      </div>
+      <div className='contact-item'>
+        <img src={EmailIcon} alt="Email Icon" className='contact-icon' />
+        <p>Email: muttamittai@gmail.com</p>
+      </div>
     </div>
-  )
+  );
 }
