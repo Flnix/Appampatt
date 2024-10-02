@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.5cfa588e.css",
-    "main.js": "./static/js/main.6b2d836a.js",
+    "main.css": "./static/css/main.785c4ad3.css",
+    "main.js": "./static/js/main.1f140808.js",
     "static/js/453.f1725f04.chunk.js": "./static/js/453.f1725f04.chunk.js",
     "static/media/exampleImage.jpg": "./static/media/exampleImage.89549378a58a4e0095a0.jpg",
     "static/media/HeaderLogoImage.png": "./static/media/HeaderLogoImage.dd0f6d8520f147dffca8.png",
@@ -10,15 +10,16 @@
     "static/media/ProductImage.jpg": "./static/media/ProductImage.c3919c6c18bdd9c59f10.jpg",
     "index.html": "./index.html",
     "static/media/telephone-fill.svg": "./static/media/telephone-fill.dc6b062b723f3f2d1896fbbf24089f68.svg",
+    "static/media/cart1.svg": "./static/media/cart1.e15e3015ec749cb1569740b20de19826.svg",
     "static/media/cart2.svg": "./static/media/cart2.6f80e18f69baa48dbcb472715e052874.svg",
     "static/media/house-fill.svg": "./static/media/house-fill.c61456310b819b79e801c2681ad4855d.svg",
     "static/media/envelope-fill.svg": "./static/media/envelope-fill.be1132f6b507d25ce32a04cfd85ef82e.svg",
-    "main.5cfa588e.css.map": "./static/css/main.5cfa588e.css.map",
-    "main.6b2d836a.js.map": "./static/js/main.6b2d836a.js.map",
+    "main.785c4ad3.css.map": "./static/css/main.785c4ad3.css.map",
+    "main.1f140808.js.map": "./static/js/main.1f140808.js.map",
     "453.f1725f04.chunk.js.map": "./static/js/453.f1725f04.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cfa588e.css",
-    "static/js/main.6b2d836a.js"
+    "static/css/main.785c4ad3.css",
+    "static/js/main.1f140808.js"
   ]
 }
