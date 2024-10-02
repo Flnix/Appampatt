@@ -18,7 +18,7 @@ const productList = [
   { id: 3, name: 'Mutta Mittai', price: 169.0, img: `${ProductImage}`,weight: "250g"  },
   { id: 4, name: 'Mutta Mittai', price: 339.0, img: `${ProductImage}`,weight: "500g"  },
   { id: 5, name: 'Mutta Mittai', price: 649.0, img: `${ProductImage}`,weight: "1Kg" },
-  { id: 6, name: 'Mutta Mittai', price: 1260.0, img: `${ProductImage}`,weight: "2Kg" },
+  { id: 6, name: 'Mutta Mittai', price: 1299.0, img: `${ProductImage}`,weight: "2Kg" },
 ];
 
 const currentOffers = [

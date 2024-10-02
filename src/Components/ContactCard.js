@@ -17,7 +17,7 @@ export default function ContactCard() {
       </div>
       <div className='contact-item'>
         <img src={EmailIcon} alt="Email Icon" className='contact-icon' />
-        <p>Email: muttamittai@gmail.com</p>
+        <p>Email: Appampattsweets@gmail.com</p>
       </div>
     </div>
   );
