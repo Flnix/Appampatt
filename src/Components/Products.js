@@ -12,6 +12,7 @@ import ContactCard from "./ContactCard";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import CurrentOffers from "./CurrentOffers";
+import cartIcon from '../Images/cart2.svg'
 
 export default function Products({ products, quantities, handleAddToCart, currentOffers }) {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -30,7 +31,7 @@ export default function Products({ products, quantities, handleAddToCart, curren
   }, [products, quantities]);
 
   return (
-    <div className="bg-dark mt-5 pt-5">
+    <div className="bg-light mt-4 pt-5">
       <NavBar />
       <CustomCarousel />
 
@@ -39,7 +40,7 @@ export default function Products({ products, quantities, handleAddToCart, curren
         activeKey={activeTab} // Set the active tab
         onSelect={(k) => setActiveTab(k)} // Update state on tab change
         id="controlled-tab-example"
-        className="justify-content-center custom-tabs"
+        className="Poppins justify-content-center custom-tabs"
       >
         <Tab eventKey="All Products" title="All Products">
          
@@ -82,6 +83,7 @@ export default function Products({ products, quantities, handleAddToCart, curren
           <span className="total-price">Total: ₹{totalPrice.toFixed(2)}</span>
           <Link to="/cart">
             <Button variant="success" className="show-cart-button">
+              <img className="carticon" src={cartIcon} alt="icon" />
               Show Cart
             </Button>
           </Link>

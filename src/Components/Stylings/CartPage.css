@@ -1,28 +1,26 @@
-/* src/components/Stylings/CartPage.css */
+/* src/components/CartPage.css */
 
+/* Styling for the bottom overlay */
 .bottom-overlay {
-    background-color: #f8f9fa; /* Optional: Background color for clarity */
-    position: fixed; /* Fix it at the bottom */
-    bottom: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    z-index: 10;
-    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visibility */
-    padding: 1rem; /* Padding around the container */
-  }
-  
-  .back-button,
-  .payment-button {
-    flex-grow: 1;
-  }
-  
-  .w-100 {
-    width: 100%;
-  }
-  
-  /* Optional styling for equal height */
-  .back-button,
-  .payment-button {
-    height: 50px; /* Set uniform button height */
-  }
-  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Styling for the back button and payment button */
+.back-button,
+.payment-button {
+  padding: 10px 20px;
+}
+
+.back-button {
+  border-radius: 0;
+}
+
+.payment-button {
+  border-radius: 0;
+}

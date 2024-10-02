@@ -32,7 +32,7 @@
   }
   
   .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+
     color: white; /* White text for contrast */
     padding: 10px; /* Padding for better readability */
     position: absolute; /* Positioning */

@@ -9,6 +9,7 @@ import History from './Components/History';
 import Media from './Components/Media';
 import AboutUs from './Components/AboutUs'
 import { Navigate } from 'react-router-dom';
+import './App.css'
 
 
 const productList = [

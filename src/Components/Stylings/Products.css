@@ -23,14 +23,15 @@
   
   /* Optional styling for the Show Cart button */
   .show-cart-button {
-    margin-left: 10px; /* Add space if needed */
+    margin-left: 10px;
+    border-radius: 0; /* Add space if needed */
   }
   
 
 /* Define styles for custom-tabs with higher specificity */
 /* Define styles for custom-tabs */
 .custom-tabs .nav-link {
-  color: rgb(255, 213, 0) !important; /* Default color for inactive tabs */
+  color: rgb(0, 0, 0) !important; /* Default color for inactive tabs */
   background-color: transparent; /* No background for inactive tabs */
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transition */
 }
@@ -44,8 +45,8 @@
 
 /* Optional: Modify hover effects */
 .custom-tabs .nav-link:hover {
-  color: #ddd !important; /* Text color on hover */
-  background-color: rgba(255, 213, 0, 0.2); /* Lighter yellow background on hover */
+  color: #000000 !important; /* Text color on hover */
+  background-color: rgba(255, 213, 0, 0.618); /* Lighter yellow background on hover */
 }
 
 /* Handle focus or other active states */
@@ -53,4 +54,17 @@
 .custom-tabs .nav-link:active {
   color: #000000 !important; /* Ensure active/focused color */
   background-color: rgb(255, 213, 0) !important; /* Background for active or focused tab */
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./Poppins-Medium.ttf);
+}
+Poppins{
+  font-family: Poppins;
+}
+
+.carticon{
+  margin-right: 4px;
+  vertical-align: -0.9px;
 }

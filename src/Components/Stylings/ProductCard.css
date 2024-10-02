@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 5px; /* Use smaller margin to reduce space between cards */
+    border-radius: 0;
   }
   
   /* Ensure the square image is within the card */
@@ -90,6 +91,7 @@
   justify-content: space-between; /* Keep content spaced out */
   margin: 10px; /* Adjust margin */
   overflow: hidden; /* Prevent content overflow */
+  border-radius: 0;
 }
 
 /* Larger font size for the title */

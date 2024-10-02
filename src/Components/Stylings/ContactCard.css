@@ -1,6 +1,6 @@
 .contact-card {
-  background-color: rgb(255, 213, 0) !important; /* Yellow background */
-  color: rgb(0, 0, 0); /* Text color */
+   /* Yellow background */
+  color: rgb(255, 255, 255); /* Text color */
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
   max-width: 100%; /* Maximum width */
@@ -18,8 +18,7 @@
   width: 20px; /* Fixed width for icon */
   height: 24px; /* Fixed height for icon */
   margin-right: 10px; /* Space between icon and text */
-  vertical-align: middle; /* Vertically center the icon */
-}
+  vertical-align: middle; /* Vertically center the icon */}
 
 /* Ensure text aligns perfectly with the icon */
 .contact-item p {

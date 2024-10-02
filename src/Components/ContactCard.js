@@ -6,7 +6,7 @@ import './Stylings/ContactCard.css';
 
 export default function ContactCard() {
   return (
-    <div className='contact-card' style={{ backgroundColor: 'yellow' }}> {/* Inline style for testing */}
+    <div className='contact-card bg-dark' style={{ backgroundColor: 'yellow' }}> {/* Inline style for testing */}
       <div className='contact-item'>
         <img src={PhoneIcon} alt="Phone Icon" className='contact-icon' />
         <p>Mobile: +91 6369715501</p>
