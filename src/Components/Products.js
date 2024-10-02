@@ -12,11 +12,16 @@ import ContactCard from "./ContactCard";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import CurrentOffers from "./CurrentOffers";
-import cartIcon from '../Images/cart2.svg'
+import cartIcon from "../Images/cart2.svg";
 
-export default function Products({ products, quantities, handleAddToCart, currentOffers }) {
+export default function Products({
+  products,
+  quantities,
+  handleAddToCart,
+  currentOffers,
+}) {
   const [totalPrice, setTotalPrice] = useState(0);
-  const [activeTab, setActiveTab] = useState("All Products"); // Use state for active tab
+  const [activeTab, setActiveTab] = useState("All Products"); 
 
   const handleQuantityChange = (productId, quantity) => {
     handleAddToCart(productId, quantity);
@@ -43,31 +48,39 @@ export default function Products({ products, quantities, handleAddToCart, curren
         className="Poppins justify-content-center custom-tabs"
       >
         <Tab eventKey="All Products" title="All Products">
-         
-            {/* Remove unnecessary minHeight from the CurrentOffers */}
-            <CurrentOffers
-              quantities={quantities}
-              currentOffers={currentOffers}
-              handleQuantityChange={handleQuantityChange}
-            />
+          {/* Remove unnecessary minHeight from the CurrentOffers */}
+          <CurrentOffers
+            quantities={quantities}
+            currentOffers={currentOffers}
+            handleQuantityChange={handleQuantityChange}
+          />
 
-            <Container fluid className="d-flex flex-column justify-content-start align-items-center mt-4">
-              <Container className="py-3" style={{ maxWidth: "600px", paddingBottom: "0" }}> {/* Remove extra padding */}
-                <Row className="g-2 justify-content-center">
-                  {/* Skip the first two items in the products array */}
-                  {products.slice(2).map((product) => (
-                    <Col key={product.id} xs={6} md={4} className="d-flex justify-content-center">
-                      <ProductsCard
-                        product={product}
-                        handleQuantityChange={handleQuantityChange}
-                        quantity={quantities[product.id] || 0}
-                      />
-                    </Col>
-                  ))}
-                </Row>
-              </Container>
+          <Container
+            fluid
+            className="d-flex flex-column justify-content-start align-items-center mt-4"
+          >
+            <Container
+              className="py-3"
+              style={{ maxWidth: "790px", paddingBottom: "0" }}
+            >
+              <Row className="g-4">
+                {products.slice(2).map((product) => (
+                  <Col
+                    key={product.id}
+                    xs={6}
+                    md={4}
+                    className="d-flex justify-content-center"
+                  >
+                    <ProductsCard
+                      product={product}
+                      handleQuantityChange={handleQuantityChange}
+                      quantity={quantities[product.id] || 0}
+                    />
+                  </Col>
+                ))}
+              </Row>
             </Container>
-       
+          </Container>
         </Tab>
         <Tab eventKey="Current Offers" title="Current Offers">
           <CurrentOffers

@@ -12,7 +12,7 @@ export default function CustomCarousel() {
     };
 
     return (
-        <div className="carousel-container"> {/* Centering container */}
+        <div className="carousel-container"> 
             <div className="carousel-wrapper"> {/* Wrapper without fixed aspect ratio */}
                 <Carousel activeIndex={index} onSelect={handleSelect} className="custom-carousel">
                     <Carousel.Item>

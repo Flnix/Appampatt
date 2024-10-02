@@ -14,7 +14,7 @@ import CurrentOffers from "./CurrentOffers";
 
 export default function Shop({ products, quantities, handleAddToCart, currentOffers }) {
   const [totalPrice, setTotalPrice] = useState(0);
-  const [activeTab, setActiveTab] = useState("All Products"); // Use state for active tab
+  const [activeTab, setActiveTab] = useState("All Products"); 
 
   const handleQuantityChange = (productId, quantity) => {
     handleAddToCart(productId, quantity);
@@ -29,19 +29,19 @@ export default function Shop({ products, quantities, handleAddToCart, currentOff
   }, [products, quantities]);
 
   return (
-    <div className="bg-dark mt-5 pt-5">
+    <div className="bg-light mt-5 pt-5">
       <NavBar />
 
-      {/* Use `activeKey` and `onSelect` to control the tabs */}
+    
       <Tabs
-        activeKey={activeTab} // Set the active tab
-        onSelect={(k) => setActiveTab(k)} // Update state on tab change
+        activeKey={activeTab} 
+        onSelect={(k) => setActiveTab(k)} 
         id="controlled-tab-example"
         className="justify-content-center custom-tabs"
       >
         <Tab eventKey="All Products" title="All Products">
           <Container fluid className="d-flex flex-column justify-content-start align-items-center mt-4">
-            {/* Remove unnecessary minHeight from the CurrentOffers */}
+       
             <CurrentOffers
               quantities={quantities}
               currentOffers={currentOffers}
@@ -49,9 +49,9 @@ export default function Shop({ products, quantities, handleAddToCart, currentOff
             />
 
             <Container fluid className="d-flex flex-column justify-content-start align-items-center mt-4">
-              <Container className="py-3" style={{ maxWidth: "600px", paddingBottom: "0" }}> {/* Remove extra padding */}
+              <Container className="py-3" style={{ maxWidth: "600px", paddingBottom: "0" }}>
                 <Row className="g-2 justify-content-center">
-                  {/* Skip the first two items in the products array */}
+              
                   {products.slice(2).map((product) => (
                     <Col key={product.id} xs={6} md={4} className="d-flex justify-content-center">
                       <ProductsCard
@@ -87,12 +87,6 @@ export default function Shop({ products, quantities, handleAddToCart, currentOff
       )}
 
       <ContactCard />
-
-      <div className="my-5">
-        <p className="text-white d-flex justify-content-center my-3">
-          @Copyright Appampatt Egg Sweet 2024
-        </p>
-      </div>
     </div>
   )
 }

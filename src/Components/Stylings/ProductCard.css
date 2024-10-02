@@ -2,14 +2,16 @@
 
 /* Set a fixed height and width for the product card */
 .product-card {
-    width: 200px;  /* Set a fixed width for the card */
-    height: 300px; /* Set a fixed height for the card */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 5px; /* Use smaller margin to reduce space between cards */
-    border-radius: 0;
-  }
+  width: 200px;  /* Set a fixed width for the card */
+  height: 300px; /* Set a fixed height for the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px; /* Use smaller margin to reduce space between cards */
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow effect */
+}
   
   /* Ensure the square image is within the card */
   .square-img {
@@ -92,6 +94,8 @@
   margin: 10px; /* Adjust margin */
   overflow: hidden; /* Prevent content overflow */
   border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: box-shadow 0.3s ease-in-out; 
 }
 
 /* Larger font size for the title */
@@ -104,7 +108,8 @@
 .square-img {
   width: 100%; /* Set image width to fill the card */
   height: 150px; /* Set a fixed height for the image to make it square */
-  object-fit: cover; /* Ensure the image covers the area without distortion */
+  object-fit: cover;
+  border-radius: 0; /* Ensure the image covers the area without distortion */
 }
 
 /* Adjust the quantity selector styling */
