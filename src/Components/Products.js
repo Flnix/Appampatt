@@ -105,11 +105,7 @@ export default function Products({
 
       <ContactCard />
 
-      <div className="my-5">
-        <p className="text-white d-flex justify-content-center my-3">
-          @Copyright Appampatt Egg Sweet 2024
-        </p>
-      </div>
+      
     </div>
   );
 }

@@ -45,3 +45,13 @@
     white-space: nowrap; /* Prevent wrapping */
     overflow: hidden; /* Hide overflow */
   }
+
+  @font-face {
+    font-family: DancingScript;
+    src: url("./DancingScript-Regular.ttf");
+  }
+
+  .DancingScript{
+    font-family: DancingScript;
+    margin-bottom: 20px;
+  }
