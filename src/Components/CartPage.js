@@ -70,7 +70,7 @@ export default function CartPage({ cartItems, handleClearCart }) {
         <Container className="form-container my-4" style={{ maxWidth: '800px' }}>
           <h3 className="mb-3">Contact Information</h3>
           <Form>
-            <Row>
+            <Row className='mb-3'>
               <Col>
                 <Form.Group>
                   <Form.Control placeholder="First name" />
@@ -85,8 +85,12 @@ export default function CartPage({ cartItems, handleClearCart }) {
 
             </Row>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label>Email Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formGroupEmail">
+        <Form.Label>Address</Form.Label>
+        <Form.Control type="address" placeholder="Enter Address" />
       </Form.Group>
           </Form>
         </Container>

@@ -39,7 +39,7 @@
 /* Style for the active tab */
 .custom-tabs .nav-link.active {
   color: #000000 !important; /* Text color for active tab */
-  background-color: rgb(255, 213, 0) !important; /* Background color for active tab */
+  background-color: #ffbf00 !important; /* Background color for active tab */
   /* Optional: Make the active tab text bolder */
 }
 

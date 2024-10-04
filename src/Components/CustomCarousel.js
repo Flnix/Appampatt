@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Eg from '../Images/sweet1.jpg'
+import Eg2 from '../Images/sweet2.jpg'
+import Eg3 from '../Images/sweet3.jpg'
 
 import './Stylings/CustomCarousel.css'; // Import the CSS file
 
@@ -23,14 +25,14 @@ export default function CustomCarousel() {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img src={Eg} alt="Second slide" className="carousel-image" />
+                        <img src={Eg2} alt="Second slide" className="carousel-image" />
                         <Carousel.Caption>
                             <h2 className='DancingScript'>Pure Eggstasy in Every Bite</h2>
         
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img src={Eg} alt="Third slide" className="carousel-image" />
+                        <img src={Eg3} alt="Third slide" className="carousel-image" />
                         <Carousel.Caption>
                             <h2 className='DancingScript'>Break into Sweet Bliss</h2>
                            
