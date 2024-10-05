@@ -25,7 +25,7 @@ export default function NavBar() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/shop">Order Now</Nav.Link>
-            <Nav.Link as={Link} to="/history">Our History</Nav.Link>
+        
             <Nav.Link as={Link} to="/media">Media</Nav.Link>
             <Nav.Link as={Link} to="/aboutus">About Us</Nav.Link>
           </Nav>

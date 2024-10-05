@@ -37,6 +37,7 @@ export default function Shop({ products, quantities, handleAddToCart, currentOff
       <Tabs
         activeKey={activeTab} 
         onSelect={(k) => setActiveTab(k)} 
+        
         id="controlled-tab-example"
         className="justify-content-center custom-tabs"
       >

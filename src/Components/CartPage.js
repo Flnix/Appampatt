@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import './Stylings/CartPage.css';
 import ContactCard from './ContactCard';
-import CartIcon from '../Images/cart1.svg';
+import CartIcon from '../Images/cart3(yellow).svg';
 import { Form, Row, Col } from 'react-bootstrap';
+import { InputGroup } from 'react-bootstrap';
 
 export default function CartPage({ cartItems, handleClearCart }) {
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = cartItems.reduce((total, item) => total + item.quantity * item.product.price, 0);
+
+  const [OrderDetails, setOrderDetails]=useState({})
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,7 +26,7 @@ export default function CartPage({ cartItems, handleClearCart }) {
 
       <div className="cart-page-container">
         <Container className="cart-content py-3 pt-5 mt-5" style={{ maxWidth: '1000px' }}>
-          <h1 className="text-center mb-4 bg-warning p-3">
+          <h1 className="text-center mb-4 titleHeads Poppins p-2">
             <img className="cartIcon" src={CartIcon} alt="icon" /> Your Cart
           </h1>
 
@@ -66,19 +69,23 @@ export default function CartPage({ cartItems, handleClearCart }) {
           )}
         </Container>
 
-       
+        {cartItems.length > 0 && (
         <Container className="form-container my-4" style={{ maxWidth: '800px' }}>
-          <h3 className="mb-3">Contact Information</h3>
-          <Form>
+        <h1 className="text-center mb-4 p-2 titleHeads Poppins">
+            <img className="cartIcon" src={CartIcon} alt="icon" /> Contact Information
+          </h1>
+          <Form className='Poppins'>
             <Row className='mb-3'>
               <Col>
                 <Form.Group>
-                  <Form.Control placeholder="First name" />
+                  <Form.Control placeholder="First name" value={OrderDetails.FirstName} onChange={e=>setOrderDetails({...OrderDetails,FirstName : e.target.value})   
+                  }/>
                 </Form.Group>
               </Col>
               <Col>
                 <Form.Group>
-                  <Form.Control placeholder="Last name" />
+                  <Form.Control placeholder="Last name" value={OrderDetails.LastName} onChange={e=>setOrderDetails({...OrderDetails,LastName : e.target.value})   
+                  }/>
                 </Form.Group>
                 
               </Col>
@@ -86,14 +93,46 @@ export default function CartPage({ cartItems, handleClearCart }) {
             </Row>
             <Form.Group className="mb-3" controlId="formGroupEmail">
         <Form.Label>Email Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control type="email" placeholder="Email address" value={OrderDetails.EmailAddress} onChange={e=>setOrderDetails({...OrderDetails,EmailAddress : e.target.value})   
+                  } />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formGroupEmail">
-        <Form.Label>Address</Form.Label>
-        <Form.Control type="address" placeholder="Enter Address" />
+        <Form.Label>Delivery Address</Form.Label>
+        <Form.Control as="textarea" row={3} type="address" placeholder="Delivery Address" value={OrderDetails.Address} onChange={e=>setOrderDetails({...OrderDetails,Address : e.target.value})   
+                  } />
       </Form.Group>
+      <Form.Group className="mb-3" controlId="formGroupEmail">
+        <Form.Label>Pincode</Form.Label>
+        <Form.Control type="address" placeholder="Pincode" value={OrderDetails.Pincode} onChange={e=>setOrderDetails({...OrderDetails,Pincode : e.target.value})   
+                  } />
+      </Form.Group>
+      <InputGroup>
+      <InputGroup.Text id="inputGroupPrepend">+91</InputGroup.Text>
+                <Form.Control
+                  type="number"
+                  placeholder="Mobile Number"
+                  value={OrderDetails.MobileNumber} onChange={e=>setOrderDetails({...OrderDetails,MobileNumber : e.target.value})   
+                  }
+                
+                />
+  
+              </InputGroup>
+              <div className='mb-3'></div>
+      <InputGroup>
+
+      <InputGroup.Text id="inputGroupPrepend">+91</InputGroup.Text>
+                <Form.Control
+                  type="number"
+                  placeholder="Alternative Phone Number"
+                  value={OrderDetails.AltMobileNumber} onChange={e=>setOrderDetails({...OrderDetails,AltMobileNumber : e.target.value})   
+                  }
+                
+                />
+  
+              </InputGroup>
+     
           </Form>
-        </Container>
+        </Container>)}
 
         <ContactCard className="contact-card" />
 

@@ -58,8 +58,24 @@
 }
 
 .cartIcon{
-  width: 30px;  /* Set the desired width */
-  height: 30px; /* Set the desired height */
+  width: 27px;  /* Set the desired width */
+  height: 27px; /* Set the desired height */
   margin-right:2px;
-  vertical-align: text-top;
+  vertical-align: text-bottom;
+  
+}
+
+.titleHeads{
+  font-size:20px;
+border-radius: 9px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+color: #ffbf00;
+}
+
+font-face {
+  font-family: Poppins;
+  src: url('./Poppins-Medium.ttf');
+}
+.Poppins{
+  font-family: Poppins;
 }

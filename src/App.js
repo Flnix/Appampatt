@@ -5,7 +5,7 @@ import Products from './Components/Products';
 import CartPage from './Components/CartPage';
 import ProductImage from './Images/ProductImage.jpg'
 import Shop from './Components/Shop'
-import History from './Components/History';
+
 import Media from './Components/Media';
 import AboutUs from './Components/AboutUs'
 import { Navigate } from 'react-router-dom';
@@ -95,7 +95,7 @@ function App() {
           currentOffers={currentOffers}
           handleAddToCart={handleAddToCart}/>}/>
           <Route path='/media' element={<Media/>}/>
-          <Route path='/history' element={<History/>}/>
+        
           <Route path='/aboutus' element={<AboutUs/>} />
  
         </Routes>
