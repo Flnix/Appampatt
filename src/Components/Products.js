@@ -63,7 +63,7 @@ export default function Products({
               className="py-3"
               style={{ maxWidth: "790px", paddingBottom: "0" }}
             >
-              <Row className="g-4">
+              <Row className="g-1">
                 {products.slice(2).map((product) => (
                   <Col
                     key={product.id}

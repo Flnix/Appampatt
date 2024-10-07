@@ -30,8 +30,11 @@ export default function Shop({ products, quantities, handleAddToCart, currentOff
 
   return (
     <div className="bg-light mt-5 pt-5">
+      <h1 className="text-center mb-4 bg-white p-2 text-warning  abouttitle DancingScript">
+    Order Now
+          </h1>
       <NavBar />
-      <h1 className="text-center mb-4 fw-medium bg-dark text-light p-3 ">Order Now</h1>
+    
 
     
       <Tabs

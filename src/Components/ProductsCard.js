@@ -16,16 +16,21 @@ function formatPriceToINR(price) {
 }
 
 export default function ProductsCard({ product, handleQuantityChange, quantity }) {
+  // Function to increase quantity
   const handleIncrement = () => {
     const newQuantity = quantity + 1;
     handleQuantityChange(product.id, newQuantity);
   };
 
+  // Function to decrease quantity and return to "ADD" button if it reaches 0
   const handleDecrement = () => {
-    if (quantity > 0) {
-      const newQuantity = quantity - 1;
-      handleQuantityChange(product.id, newQuantity);
-    }
+    const newQuantity = quantity - 1;
+    handleQuantityChange(product.id, Math.max(0, newQuantity)); // Ensure quantity does not go below 0
+  };
+
+  // Function to set the initial quantity to 1 when "ADD" is clicked
+  const handleAdd = () => {
+    handleQuantityChange(product.id, 1); // Set quantity to 1 when ADD is clicked
   };
 
   return (
@@ -37,16 +42,25 @@ export default function ProductsCard({ product, handleQuantityChange, quantity }
         
         {/* Display formatted price */}
         <Card.Text className="product-price">{formatPriceToINR(product.price)}</Card.Text>
-        
+
+        {/* Quantity selector */}
         <div className="quantity-selector">
-          <Button variant="secondary" onClick={handleDecrement}>-</Button>
-          <Form.Control
-            type="number"
-            value={quantity}
-            readOnly
-            style={{ width: '50px', textAlign: 'center' }}
-          />
-          <Button variant="secondary" onClick={handleIncrement}>+</Button>
+          {quantity === 0 ? (
+            <Button variant="primary" className="add-button" onClick={handleAdd}>
+              ADD +
+            </Button>
+          ) : (
+            <>
+              <Button variant="secondary" className="decrement-button" onClick={handleDecrement}>-</Button>
+              <Form.Control
+                type="number"
+                value={quantity}
+                readOnly
+                style={{ width: '50px', textAlign: 'center' }}
+              />
+              <Button variant="secondary" className="increment-button" onClick={handleIncrement}>+</Button>
+            </>
+          )}
         </div>
       </Card.Body>
     </Card>

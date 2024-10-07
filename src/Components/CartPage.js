@@ -74,6 +74,7 @@ export default function CartPage({ cartItems, handleClearCart }) {
         <h1 className="text-center mb-4 p-2 titleHeads Poppins">
             <img className="cartIcon" src={CartIcon} alt="icon" /> Contact Information
           </h1>
+          <div className='mt-3'>
           <Form className='Poppins'>
             <Row className='mb-3'>
               <Col>
@@ -132,6 +133,7 @@ export default function CartPage({ cartItems, handleClearCart }) {
               </InputGroup>
      
           </Form>
+          </div>
         </Container>)}
 
         <ContactCard className="contact-card" />

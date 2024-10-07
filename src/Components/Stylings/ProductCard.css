@@ -3,7 +3,7 @@
 /* Set a fixed height and width for the product card */
 .product-card {
   width: 200px;  /* Set a fixed width for the card */
-  height: 300px; /* Set a fixed height for the card */
+  height: 315px; /* Set a fixed height for the card */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,19 +43,14 @@
   
   /* src/components/Stylings/ProductsCard.css */
 
-.quantity-selector {
-    display: flex; /* Use flexbox to align child elements in a row */
-    align-items: center; /* Center the items vertically */
-    justify-content: space-between; /* Space out the buttons evenly */
-    gap: 10px; /* Add some spacing between the elements */
-    margin-top: 10px; /* Add some top margin to space out from other content */
-  }
+
   
   /* Ensure the buttons have consistent width */
   .quantity-selector .btn {
-    width: 40px; /* Set a fixed width for the increment/decrement buttons */
+    width: 70px; /* Set a fixed width for the increment/decrement buttons */
     padding: 5px; /* Adjust padding */
     text-align: center; /* Center align text */
+    border-radius: 0
   }
   
   /* Style the input field for the quantity */
@@ -63,6 +58,7 @@
     width: 60px; /* Set a fixed width for the input field */
     text-align: center; /* Center align the text */
     padding: 5px 0; /* Adjust padding for better alignment */
+    border-radius: 0;
   }
   
   /* src/components/Stylings/ProductCard.css */
@@ -81,13 +77,10 @@
 }
 
 
-/* src/components/Stylings/ProductCard.css */
-/* src/components/Stylings/ProductCard.css */
-
 /* New styles for LargerProductCard */
 .larger-product-card {
   width: 400px;  /* Width of the larger product card */
-  height: 300px; /* Reduced height for the larger product card */
+  height: 315px; /* Reduced height for the larger product card */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Keep content spaced out */
@@ -113,11 +106,56 @@
 }
 
 /* Adjust the quantity selector styling */
+/* Single .quantity-selector style */
 .quantity-selector {
   display: flex; /* Use flexbox to align child elements in a row */
   align-items: center; /* Center the items vertically */
-  justify-content: center; /* Space out the buttons evenly */
-  gap: 10px; /* Add some spacing between the elements */
-  margin-top: auto;
-  margin-bottom: 30px; /* Push quantity selector to the bottom of the card */
+  justify-content: center; /* Center the elements horizontally */
+  gap: 10px; /* Add spacing between the elements */
+  margin-top: 10px; /* Add some top margin to space out from other content */
+  margin-bottom: 20px; /* Add some bottom margin to push the button down */
+  padding: 0; /* Remove any padding */
+}
+
+/* Button styling */
+/* Adjust the .add-button style */
+.add-button {
+  width: 140px; /* Increased width for better visibility */
+  height: 40px; /* Slightly increased height */
+  padding: 8px 12px; /* Add balanced padding for text */
+  text-align: center; /* Center the text */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide any overflowing text */
+  font-size: 1rem; /* Larger font size for better readability */
+  border-radius: 5px; /* Set rounding for the rectangle shape */
+  background-color: #ffcc00; /* Set button background color */
+  color: #000000b5; /* Set button text color */
+  border: none; /* Remove border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for shadow effect and background */
+  font-family: Poppins;
+}
+
+/* Hover effect */
+.add-button:hover {
+  background-color: #000000b5; /* Set hover background color */
+  color: #ffcc00; /* Set hover text color */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Slightly increased shadow on hover */
+}
+
+
+
+/* Make sure the .quantity-selector container isn't limiting space */
+.quantity-selector {
+  display: flex; /* Use flexbox to align child elements */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center the button within the container */
+  gap: 5px; /* Space between the button and any other element */
+  margin-top: 15px; /* Add top margin */
+  padding: 0; /* Remove padding */
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('./Poppins-Medium.ttf');
 }
