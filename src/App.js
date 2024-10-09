@@ -63,7 +63,20 @@ function App() {
 
   const handleClearCart = () => {setCartItems([]);
     setQuantities({});};
-
+    const handleRemoveItem = (itemToRemove) => {
+      const updatedCart = cartItems.filter(item => item.product.id !== itemToRemove.product.id);
+      
+      // Update the cart
+      setCartItems(updatedCart);
+    
+      // Update the quantities state, set the removed item's quantity to 0
+      setQuantities((prevQuantities) => ({
+        ...prevQuantities,
+        [itemToRemove.product.id]: 0,
+      }));
+    };
+    
+    
   return (
     <Router>
       <div className="App">
@@ -86,6 +99,7 @@ function App() {
               <CartPage
                 cartItems={cartItems}
                 handleClearCart={handleClearCart}
+                handleRemoveItem={handleRemoveItem} 
               />
             }
           />
